@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>NEXUS</h1>
+        <p>Explorez les projets réalisés par NEXUS STUDIO.</p>
+        <br>
+        <p>NEXUS est un projet qui regroupe tous nos projets de développement marrants ou passionnants.</p>
+        <p>NEXUS vous apprend aussi le domaine de l'informatique, notamment le développement et le hacking en cybersécurité.</p>
+    </header>
+
+    <!-- Bouton Paramètre en haut à gauche -->
+    <div class="settings-button">
+        <button class="btn-settings" onclick="toggleSettingsMenu()">Paramètres</button>
+    </div>
+
+    <!-- Menu des paramètres -->
+    <div class="settings-menu" id="settings-menu">
+        <button class="btn-theme" onclick="toggleThemePopup()">Thème</button>
+    </div>
+
+    <!-- Popup de sélection du thème -->
+    <div class="theme-popup" id="theme-popup">
+        <button class="btn" onclick="changerTheme('hacking')">Thème Hacking</button>
+        <button class="btn" onclick="changerTheme('rose')">Thème Rose</button>
+        <button class="btn" onclick="changerTheme('bleu-rouge')">Thème Bleu-Rouge</button>
+        <button class="btn" onclick="changerTheme('neon')">Thème Néon</button>
+        <button class="btn" onclick="changerTheme('spacial')">Thème Spacial</button>
+        <button class="btn" onclick="changerTheme('sakura')">Thème Sakura</button>
+
+        <!-- Bouton Fermer dans la popup -->
+        <button class="btn-close" onclick="closePopup()">Fermer</button>
+    </div>
+
+    <section class="projects">
+        <div class="project-card">
+            <h2>Projet Auto-Password</h2>
+            <p>Un projet sur l'automatisation de mots de passe. Fait par le random sur Java.</p>
+            <a href="https://leo62-glitch.github.io/Secure_Password/">Voir le projet</a>
+        </div>
+
+        <div class="project-card">
+            <h2>LE CODEUR</h2>
+            <p>Le codeur est un site qui permet de coder des messages. Cela permettrait de cacher des messages par exemple.</p>
+            <a href="https://leo62-glitch.github.io/Coder/">Voir le projet</a>
+        </div>
+
+        <div class="project-card">
+            <h2>Le Décodeur</h2>
+            <p>Le décodeur est un site qui permet de décoder des messages.</p>
+            <a href="https://leo62-glitch.github.io/decoder/">Voir le projet</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 NEXUS - Tous droits réservés</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
