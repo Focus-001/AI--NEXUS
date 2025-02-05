@@ -1,109 +1,241 @@
-/* Styles généraux pour la page */
+/* Style de base */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-}
-
-/* Conteneur principal */
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative;
-}
-
-/* Conteneur des boutons (Paramètres et Thème) */
-.parametre-container {
-    position: relative;  /* Pour positionner les boutons correctement dans leur conteneur */
-    z-index: 2; /* Assure que le conteneur des boutons soit au-dessus du fond */
-}
-
-/* Bouton Paramètres */
-.btn-parametre {
-    position: relative;
-    z-index: 3;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-/* Effet au survol du bouton Paramètres */
-.btn-parametre:hover {
-    background-color: #45a049;
-}
-
-/* Bouton Thème (placé juste en dessous des paramètres) */
-.btn-theme {
-    position: relative;  
-    z-index: 2; /* Le bouton Thème est derrière le bouton Paramètres */
-    margin-top: 10px; /* Espacement entre les boutons */
-    padding: 10px 20px;
-    background-color: #008CBA;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-/* Effet au survol du bouton Thème */
-.btn-theme:hover {
-    background-color: #007bb5;
-}
-
-/* Styles des éléments du menu, si applicable */
-.menu {
-    list-style: none;
-    padding: 0;
-}
-
-.menu li {
-    margin: 10px 0;
-}
-
-/* Styles des inputs, si présents dans ton formulaire ou autres sections */
-input[type="text"], input[type="password"], input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-/* Style des sections d'arrière-plan ou autres éléments */
-.background-section {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Autres styles pour ton projet (par exemple : animations, transitions, etc.) */
-.animations {
-    animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Exemple de style de fond avec des images ou des dégradés */
-.background-image {
-    background-image: url('path_to_image.jpg');
+    background: url('https://www.example.com/path-to-your-image.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    height: 100vh;
+    color: white;
+    transition: background 0.5s, color 0.5s;
+}
+
+/* Thème Hacking */
+.theme-hacking {
+    background: #2e2e2e;
+    color: #00ff00;
+}
+
+/* Thème Rose */
+.theme-rose {
+    background: #ff66b2;
+    color: white;
+}
+
+/* Thème Bleu Rouge */
+.theme-bleu-rouge {
+    background: linear-gradient(to right, #0000ff, #ff0000);
+    color: white;
+}
+
+/* Thème Néon : Avec néon bleu et bordures lumineuses */
+.theme-neon {
+    background: black;
+    color: #39ff14;
+    box-shadow: 0 0 30px #39ff14;
+}
+
+.theme-neon .project-card {
+    border: 2px solid #39ff14;
+    box-shadow: 0 0 20px #39ff14;
+}
+
+/* Thème Spacial */
+.theme-spacial {
+    background: url('https://www.example.com/spacial-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Thème Sakura */
+.theme-sakura {
+    background: #ffd1dc;
+    color: #d500f9;
+}
+
+/* En-tête */
+header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+/* Section des projets */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    margin-bottom: 50px;
+}
+
+.project-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 20px;
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+}
+
+.project-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.project-card a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    text-align: center;
+}
+
+/* Bouton Paramètre amélioré */
+.settings-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.btn-settings {
+    background-color: #333;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-settings:hover {
+    background-color: #555;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+/* Menu des paramètres */
+.settings-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 45px; /* Décalé pour ne pas être collé à gauche */
+    z-index: 999;
+}
+
+.settings-menu .btn-theme {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.settings-menu .btn-theme:hover {
+    background-color: #555;
+}
+
+/* Popup de sélection du thème */
+.theme-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.781);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 999;
+    box-shadow: 0 0 10px #00ff00;
+    width: 250px;
+    text-align: center;
+}
+
+.theme-popup .btn {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.theme-popup .btn:hover {
+    background-color: #555;
+}
+
+/* Bouton fermer la popup */
+.btn-close {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-close:hover {
+    background-color: darkred;
+}
+
+/* Cacher le menu et la popup lorsqu'ils ne sont pas ouverts */
+.settings-menu.open {
+    display: block;
+}
+
+.theme-popup.open {
+    display: block;
+}
+
+/* Bouton Thème placé en avant-plan */
+.settings-menu .btn-theme {
+    display: block;
+    margin-top: 10px;  /* Espacement entre le bouton Paramètres et le bouton Thème */
+    position: relative; /* Positionner correctement dans le menu */
+    z-index: 1001; /* Assure que le bouton thème soit au-dessus du fond */
+}
+
+/* Si tu veux que le bouton "Thème" soit légèrement différent */
+.settings-menu .btn-theme {
+    background-color: #008CBA; /* Exemple de couleur différente pour le bouton Thème */
+}
+
+.settings-menu .btn-theme:hover {
+    background-color: #007bb5; /* Changer la couleur du bouton Thème au survol */
 }
