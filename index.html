@@ -1,94 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXUS</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>NEXUS</h1>
-        <p>Explorez les projets réalisés par NEXUS STUDIO.</p>
-        <br>
-        <p>NEXUS est un projet qui regroupe tous nos projets de développement marrants ou passionnants.</p>
-        <p>NEXUS vous apprend aussi le domaine de l'informatique, notamment le développement, le hacking en cybersécurité et le fonctionnement des IA.</p>
-    </header>
-    
-<div class="parametre-container">
+  <header>
+    <h1>NEXUS</h1>
+    <p>Explorez les projets réalisés par NEXUS STUDIO.</p>
+    <br>
+    <p>NEXUS est un projet qui regroupe tous nos projets de développement marrants ou passionnants.</p>
+    <p>NEXUS vous apprend aussi le domaine de l'informatique, notamment le développement, le hacking en cybersécurité et le fonctionnement des IA.</p>
+  </header>
+  
+  <div class="parametre-container">
     <!-- Bouton Paramètres -->
-    <button class="btn-parametre">Paramètres</button>
-    <!-- Bouton Thème, déplacé juste sous les paramètres -->
-    <button class="btn-theme">Thème</button>
-</div>
+    <button class="btn-parametre" onclick="toggleSettingsMenu()">Paramètres</button>
+    <!-- Bouton Thème (initialement caché) -->
+    <button class="btn-theme" onclick="toggleThemePopup()">Thème</button>
+    <!-- Bouton Communauté (initialement caché) -->
+    <button class="btn-communaute" onclick="toggleCommunityPopup()">Communauté</button>
+  </div>
 
-    <!-- Popup de sélection du thème -->
-    <div class="theme-popup" id="theme-popup">
-        <button class="btn" onclick="changerTheme('hacking')">Thème Hacking</button>
-        <button class="btn" onclick="changerTheme('rose')">Thème Rose</button>
-        <button class="btn" onclick="changerTheme('bleu-rouge')">Thème Bleu-Rouge</button>
-        <button class="btn" onclick="changerTheme('neon')">Thème Néon</button>
-        <button class="btn" onclick="changerTheme('spacial')">Thème Spacial</button>
-        <button class="btn" onclick="changerTheme('sakura')">Thème Sakura</button>
+  <!-- Popup de sélection du thème -->
+  <div class="theme-popup" id="theme-popup">
+    <button class="btn" onclick="changerTheme('hacking')">Thème Hacking</button>
+    <button class="btn" onclick="changerTheme('rose')">Thème Rose</button>
+    <button class="btn" onclick="changerTheme('bleu-rouge')">Thème Bleu-Rouge</button>
+    <button class="btn" onclick="changerTheme('neon')">Thème Néon</button>
+    <button class="btn" onclick="changerTheme('spacial')">Thème Spacial</button>
+    <button class="btn" onclick="changerTheme('sakura')">Thème Sakura</button>
+    <!-- Bouton Fermer dans la popup -->
+    <button class="btn-close" onclick="closePopup()">Fermer</button>
+  </div>
 
-        <!-- Bouton Fermer dans la popup -->
-        <button class="btn-close" onclick="closePopup()">Fermer</button>
+  <!-- Popup Communauté -->
+  <div class="community-popup" id="community-popup">
+    <h2>Rejoindre le Discord</h2>
+    <p>Sur le discord officiel de NEXUS, nous pouvons répondre à vos questions ou vous pouvez nous proposer des projets à publier dans NEXUS.</p>
+    <a href="https://discord.gg/6A6KKyzq" target="_blank" class="btn">Rejoindre le Discord</a>
+    <!-- Bouton Fermer la popup communauté -->
+    <button class="btn-close" onclick="closeCommunityPopup()">Fermer</button>
+  </div>
+
+  <section class="projects">
+    <div class="project-card">
+      <h2>Projet Auto-Password</h2>
+      <p>Un projet sur l'automatisation de mots de passe. Fait par le random sur Java.</p>
+      <a href="https://leo62-glitch.github.io/Secure_Password/">Voir le projet</a>
     </div>
+    <div class="project-card">
+      <h2>LE CODEUR</h2>
+      <p>Le codeur est un site qui permet de coder des messages. Cela permettra de cacher des messages par exemple.</p>
+      <a href="https://leo62-glitch.github.io/Coder/">Voir le projet</a>
+    </div>
+    <div class="project-card">
+      <h2>Le Décodeur</h2>
+      <p>Le décodeur est un site qui permet de décoder des messages.</p>
+      <a href="https://leo62-glitch.github.io/decoder/">Voir le projet</a>
+    </div>
+    <div class="project-card">
+      <h2>Pong</h2>
+      <p>Ceci est un banal Pong coder par focus</p>
+      <br>
+      <p>(JEUX SEULEMENT DISPONIBLE SUR PC)</p>
+      <a href="https://focus-001.github.io/Pong/">Voir le projet</a>
+    </div>
+    <div class="project-card">
+      <h2>LE RICKROLL</h2>
+      <p>Ceci est un troll pour rickroll, le site vous dit d'entrer votre pseudo mais en cliquant sur "valider"</p>
+      <p>vous vous faites rickroll</p>
+      <a href="https://focus-001.github.io/log-in/">Voir le projet</a>
+    </div>
+  </section>
 
-    <section class="projects">
-        <div class="project-card">
-            <h2>Projet Auto-Password</h2>
-            <p>Un projet sur l'automatisation de mots de passe. Fait par le random sur Java.</p>
-            <a href="https://leo62-glitch.github.io/Secure_Password/">Voir le projet</a>
-        </div>
+  <footer>
+    <p>© 2025 NEXUS - nexus studio</p>
+  </footer>
 
-        <div class="project-card">
-            <h2>LE CODEUR</h2>
-            <p>Le codeur est un site qui permet de coder des messages. Cela permettrait de cacher des messages par exemple.</p>
-            <a href="https://leo62-glitch.github.io/Coder/">Voir le projet</a>
-        </div>
-
-        <div class="project-card">
-            <h2>Le Décodeur</h2>
-            <p>Le décodeur est un site qui permet de décoder des messages.</p>
-            <a href="https://leo62-glitch.github.io/decoder/">Voir le projet</a>
-        </div>
-
-        <div class="project-card">
-            <h2>Pong</h2>
-            <p>Ceci est un banal Pong coder par focus</p>
-            <a href="https://focus-001.github.io/Pong/">Voir le projet</a>
-        </div>
-
-        <div class="project-card">
-            <h2>(application qui arrive)</h2>
-            <p>...</p>
-            <!--<a href="...">Voir le projet</a>-->
-        </div>
-
-        <div class="project-card">
-            <h2>(application qui arrive)</h2>
-            <p>...</p>
-            <!--<a href="...">Voir le projet</a>-->
-        </div>
-
-        <div class="project-card">
-            <h2>(application qui arrive)</h2>
-            <p>...</p>
-            <!--<a href="...">Voir le projet</a>-->
-        </div>
-
-        <div class="project-card">
-            <h2>(application qui arrive)</h2>
-            <p>...</p>
-            <!--<a href="...">Voir le projet</a>-->
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 NEXUS - nexus studio</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
