@@ -7,73 +7,40 @@ body {
     background-size: cover;
     color: white;
     transition: background 0.5s, color 0.5s;
-}
-
-/* Thème Hacking */
-.theme-hacking {
-    background: #2e2e2e;
-    color: #00ff00;
-}
-
-/* Thème Rose */
-.theme-rose {
-    background: #ff66b2;
-    color: white;
-}
-
-/* Thème Bleu Rouge */
-.theme-bleu-rouge {
-    background: linear-gradient(to right, #0000ff, #ff0000);
-    color: white;
-}
-
-/* Thème Néon : Avec néon bleu et bordures lumineuses */
-.theme-neon {
-    background: black;
-    color: #39ff14;
-    box-shadow: 0 0 30px #39ff14;
-}
-
-.theme-neon .project-card {
-    border: 2px solid #39ff14;
-    box-shadow: 0 0 20px #39ff14;
-}
-
-/* Thème Spacial */
-.theme-spacial {
-    background: url('https://www.example.com/spacial-image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-}
-
-/* Thème Sakura */
-.theme-sakura {
-    background: #ffd1dc;
-    color: #d500f9;
-}
-
-/* En-tête */
-header {
+  }
+  
+  /* Thème Hacking */
+  .theme-hacking { background: #2e2e2e; color: #00ff00; }
+  /* Thème Rose */
+  .theme-rose { background: #ff66b2; color: white; }
+  /* Thème Bleu Rouge */
+  .theme-bleu-rouge { background: linear-gradient(to right, #0000ff, #ff0000); color: white; }
+  /* Thème Néon : Avec néon bleu et bordures lumineuses */
+  .theme-neon { background: black; color: #39ff14; box-shadow: 0 0 30px #39ff14; }
+  .theme-neon .project-card { border: 2px solid #39ff14; box-shadow: 0 0 20px #39ff14; }
+  /* Thème Spacial */
+  .theme-spacial { background: url('https://www.example.com/spacial-image.jpg') no-repeat center center fixed; background-size: cover; }
+  /* Thème Sakura */
+  .theme-sakura { background: #ffd1dc; color: #d500f9; }
+  
+  /* En-tête */
+  header {
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     text-align: center;
-}
-
-header h1 {
-    font-size: 3em;
-    margin: 0;
-}
-
-/* Section des projets */
-.projects {
+  }
+  header h1 { font-size: 3em; margin: 0; }
+  
+  /* Section des projets */
+  .projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 40px 20px;
     margin-bottom: 50px;
-}
-
-.project-card {
+  }
+  
+  .project-card {
     background-color: rgba(0, 0, 0, 0.7);
     margin: 20px;
     border-radius: 10px;
@@ -81,92 +48,50 @@ header h1 {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
+  }
+  
+  .project-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
-}
-
-.project-card h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    font-size: 1em;
-    margin-bottom: 15px;
-}
-
-.project-card a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project-card a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
+  }
+  
+  .project-card h2 { font-size: 1.5em; margin-bottom: 10px; }
+  .project-card p { font-size: 1em; margin-bottom: 15px; }
+  .project-card a { color: #4CAF50; text-decoration: none; font-weight: bold; }
+  .project-card a:hover { text-decoration: underline; }
+  
+  /* Pied de page */
+  footer {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px;
     text-align: center;
-}
-
-/* Bouton Paramètre amélioré */
-.settings-button {
+  }
+  
+  /* Positionnement des boutons */
+  .parametre-container {
     position: fixed;
     top: 20px;
     left: 20px;
     z-index: 1000;
-}
-
-.btn-settings {
+  }
+  
+  .btn-parametre, .btn-theme, .btn-communaute {
     background-color: #333;
     color: white;
-    padding: 15px 25px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.btn-settings:hover {
-    background-color: #555;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
-}
-
-/* Menu des paramètres */
-.settings-menu {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 45px; /* Décalé pour ne pas être collé à gauche */
-    z-index: 999;
-}
-
-.settings-menu .btn-theme {
-    display: block;
-    margin: 10px 0;
     padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #333333;
-    color: white;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
     transition: background-color 0.3s;
-}
-
-.settings-menu .btn-theme:hover {
+  }
+  
+  .btn-parametre:hover, .btn-theme:hover, .btn-communaute:hover {
     background-color: #555;
-}
-
-/* Popup de sélection du thème */
-.theme-popup {
+  }
+  
+  /* Popup de sélection du thème */
+  .theme-popup, .community-popup {
     display: none;
     position: fixed;
     top: 50%;
@@ -179,9 +104,9 @@ footer {
     box-shadow: 0 0 10px #00ff00;
     width: 250px;
     text-align: center;
-}
-
-.theme-popup .btn {
+  }
+  
+  .theme-popup .btn, .community-popup .btn {
     display: block;
     margin: 10px 0;
     padding: 10px 20px;
@@ -192,14 +117,13 @@ footer {
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s;
-}
-
-.theme-popup .btn:hover {
+  }
+  
+  .theme-popup .btn:hover, .community-popup .btn:hover {
     background-color: #555;
-}
-
-/* Bouton fermer la popup */
-.btn-close {
+  }
+  
+  .theme-popup .btn-close, .community-popup .btn-close {
     background-color: red;
     color: white;
     padding: 10px 20px;
@@ -208,34 +132,20 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.btn-close:hover {
+  }
+  
+  .theme-popup .btn-close:hover, .community-popup .btn-close:hover {
     background-color: darkred;
-}
-
-/* Cacher le menu et la popup lorsqu'ils ne sont pas ouverts */
-.settings-menu.open {
+  }
+  
+  /* Menus ouverts */
+  .theme-popup.open, .community-popup.open {
     display: block;
-}
-
-.theme-popup.open {
-    display: block;
-}
-
-/* Bouton Thème placé en avant-plan */
-.settings-menu .btn-theme {
-    display: block;
-    margin-top: 10px;  /* Espacement entre le bouton Paramètres et le bouton Thème */
-    position: relative; /* Positionner correctement dans le menu */
-    z-index: 1001; /* Assure que le bouton thème soit au-dessus du fond */
-}
-
-/* Si tu veux que le bouton "Thème" soit légèrement différent */
-.settings-menu .btn-theme {
-    background-color: #008CBA; /* Exemple de couleur différente pour le bouton Thème */
-}
-
-.settings-menu .btn-theme:hover {
-    background-color: #007bb5; /* Changer la couleur du bouton Thème au survol */
-}
+  }
+  
+  /* Masquer les boutons "Thème" et "Communauté" par défaut */
+  .parametre-container .btn-theme,
+  .parametre-container .btn-communaute {
+    display: none;
+  }
+  
