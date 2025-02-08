@@ -1,0 +1,177 @@
+/* Styles spécifiques à la page contact */
+.contact-hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #111;
+  border-bottom: 1px solid #00ff00;
+}
+
+.contact-hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+.contact-hero p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.contact-card {
+  background: #111;
+  border: 1px solid #00ff00;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+.contact-card h3 {
+  margin-bottom: 20px;
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.contact-info {
+  margin: 30px 0;
+}
+
+.contact-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.contact-email svg {
+  width: 24px;
+  height: 24px;
+  fill: #00ff00;
+}
+
+.email-link {
+  color: #00ff00;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 3px #00ff00;
+}
+
+.email-link:hover {
+  color: #b0ff00;
+  text-shadow: 0 0 8px #00ff00;
+}
+
+/* Ajustements pour les différents thèmes */
+body.theme-pink .contact-hero {
+  border-color: #fff;
+}
+
+body.theme-pink .contact-card {
+  border-color: #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+body.theme-pink .contact-card h3,
+body.theme-pink .email-link {
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+}
+
+body.theme-pink .contact-email svg {
+  fill: #fff;
+}
+
+body.theme-pink .email-link:hover {
+  color: #ff69b4;
+}
+
+/* Thème Bleu-Rouge */
+body.theme-bluered .contact-card {
+  border-color: #ff3366;
+  box-shadow: 0 0 20px rgba(255, 51, 102, 0.1);
+}
+
+body.theme-bluered .contact-card h3,
+body.theme-bluered .email-link {
+  color: #ff3366;
+  text-shadow: 0 0 5px #ff3366;
+}
+
+body.theme-bluered .contact-email svg {
+  fill: #ff3366;
+}
+
+/* Thème Néon */
+body.theme-neon .contact-card {
+  border-color: #ff00ff;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+body.theme-neon .contact-card h3,
+body.theme-neon .email-link {
+  color: #ff00ff;
+  text-shadow: 0 0 8px #ff00ff;
+}
+
+body.theme-neon .contact-email svg {
+  fill: #ff00ff;
+}
+
+/* Thème Spatial */
+body.theme-space .contact-card {
+  border-color: #4a90e2;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+body.theme-space .contact-card h3,
+body.theme-space .email-link {
+  color: #4a90e2;
+  text-shadow: 0 0 5px #4a90e2;
+}
+
+body.theme-space .contact-email svg {
+  fill: #4a90e2;
+}
+
+/* Thème Sakura */
+body.theme-sakura .contact-card {
+  border-color: #ff8ba7;
+  background: #fff0f3;
+}
+
+body.theme-sakura .contact-card h3 {
+  color: #33272a;
+  text-shadow: none;
+}
+
+body.theme-sakura .email-link {
+  color: #ff8ba7;
+  text-shadow: none;
+}
+
+body.theme-sakura .contact-email svg {
+  fill: #ff8ba7;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 20px;
+  }
+  
+  .contact-hero {
+    padding: 40px 20px;
+  }
+  
+  .contact-hero h2 {
+    font-size: 2em;
+  }
+}
