@@ -1,4 +1,3 @@
-/* Reset et styles de base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +11,6 @@ body {
   line-height: 1.6;
 }
 
-/* En-tête */
 header {
   display: flex;
   justify-content: space-between;
@@ -54,7 +52,6 @@ nav ul li a.active {
   color: #b0ff00;
 }
 
-/* Bouton de thème */
 #theme-toggle-btn {
   padding: 12px 20px;
   background: transparent;
@@ -70,7 +67,6 @@ nav ul li a.active {
   color: #000;
 }
 
-/* Hero Section */
 .hero {
   position: relative;
   height: 80vh;
@@ -107,12 +103,10 @@ nav ul li a.active {
   margin-top: 20px;
 }
 
-/* Hero SVG Background */
 .hero-svg {
   display: none;
 }
 
-/* Keyframe Animations */
 @keyframes pulse {
   from {
     transform: scale(1);
@@ -137,7 +131,6 @@ nav ul li a.active {
   }
 }
 
-/* About Section */
 .about {
   padding: 40px 20px;
   background: #111;
@@ -159,7 +152,6 @@ nav ul li a.active {
   font-size: 1.1em;
 }
 
-/* Pied de page */
 footer {
   text-align: center;
   padding: 20px;
@@ -167,10 +159,6 @@ footer {
   border-top: 1px solid #00ff00;
 }
 
-/* Thèmes */
-/* Thème Hacking (default) reste le même */
-
-/* Thème Rose */
 body.theme-pink {
   background: #ff69b4;
   color: #fff;
@@ -199,7 +187,6 @@ body.theme-pink #theme-toggle-btn:hover {
   color: #ff69b4;
 }
 
-/* Thème Bleu-Rouge */
 body.theme-bluered {
   background: linear-gradient(45deg, #000428, #004e92);
   color: #ff3366;
@@ -495,7 +482,6 @@ body.theme-forest .settings-dropdown {
   border-color: #7fff00;
 }
 
-/* Settings Button */
 .settings-btn {
   background: transparent;
   border: 1px solid #00ff00;
@@ -519,7 +505,6 @@ body.theme-forest .settings-dropdown {
   height: 16px;
 }
 
-/* Modal Styles */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -584,12 +569,10 @@ body.theme-forest .settings-dropdown {
   color: #fff;
 }
 
-/* Remove the fixed theme selector since we're using modal now */
 .theme-selector {
   display: none;
 }
 
-/* Settings Button and Dropdown */
 .settings-container {
   position: relative;
 }
@@ -626,7 +609,6 @@ body.theme-forest .settings-dropdown {
   color: #000;
 }
 
-/* Theme adjustments for dropdowns in different themes */
 body.theme-pink .settings-dropdown {
   background: #ff1493;
   border-color: #fff;
@@ -754,7 +736,6 @@ body.theme-forest .settings-dropdown button:hover {
   color: #1b4b36;
 }
 
-/* Background Modal Styles */
 .background-modal {
   display: none;
   position: fixed;
@@ -823,7 +804,6 @@ body.theme-forest .settings-dropdown button:hover {
   transform: scale(1.05);
 }
 
-/* Adjust dropdown to include new button */
 .settings-dropdown button {
   width: 100%;
   padding: 8px 15px;
