@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Configuration des thèmes
   const themes = {
     cyberpunk: {
       name: 'Thème Cyberpunk',
@@ -53,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Fonction pour changer de thème
   function setTheme(themeName) {
     if (!themes[themeName]) {
       console.error(`Theme "${themeName}" not found`);
@@ -73,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('theme', themeName);
   }
 
-  // Create and handle modal
   function createThemeModal() {
     const modalHTML = `
       <div class="modal-overlay" id="themeModal">
@@ -101,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
       themeGrid.appendChild(button);
     });
 
-    // Close modal handlers
     const modal = document.getElementById('themeModal');
     const closeBtn = document.querySelector('.close-modal');
     
@@ -116,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Create and handle background modal
   function createBackgroundModal() {
     const modalHTML = `
       <div class="modal-overlay background-modal" id="backgroundModal">
@@ -148,7 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.body.insertAdjacentHTML('beforeend', modalHTML);
 
-    // Background selection handlers
     const backgroundOptions = document.querySelectorAll('.background-option');
     const savedBg = localStorage.getItem('background');
 
@@ -165,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Close modal handlers
     const modal = document.getElementById('backgroundModal');
     const closeBtn = modal.querySelector('.close-modal');
     
@@ -180,15 +173,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Function to set background
   function setBackground(bgName) {
-    // Reset any existing background styles
     document.body.style.removeProperty('background-image');
     document.body.style.removeProperty('background-size');
     document.body.style.removeProperty('background-attachment');
     
     if (bgName === 'default') {
-      localStorage.removeItem('background'); // Remove background preference for default
+      localStorage.removeItem('background');
     } else {
       const backgrounds = {
         yellow_pink: "url('Capture_decran_2025-02-08_162326.png')",
@@ -206,11 +197,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Initialize modals
   createThemeModal();
   createBackgroundModal();
 
-  // Handle settings dropdown
   const settingsBtn = document.querySelector('.settings-btn');
   const settingsDropdown = document.querySelector('.settings-dropdown');
   const themeBtn = document.querySelector('.theme-btn-dropdown');
@@ -219,35 +208,29 @@ document.addEventListener('DOMContentLoaded', () => {
     e.stopPropagation();
     settingsDropdown.classList.toggle('show');
   });
-
-  // Close dropdown when clicking outside
+  
   document.addEventListener('click', () => {
     settingsDropdown.classList.remove('show');
   });
 
-  // Theme button click handler
   themeBtn.addEventListener('click', () => {
     document.getElementById('themeModal').style.display = 'flex';
     settingsDropdown.classList.remove('show');
   });
 
-  // Add background button to settings dropdown
   const bgButton = document.createElement('button');
   bgButton.className = 'background-btn-dropdown';
   bgButton.textContent = 'Arrière-plan';
   settingsDropdown.appendChild(bgButton);
 
-  // Background button click handler
   bgButton.addEventListener('click', () => {
     document.getElementById('backgroundModal').style.display = 'flex';
     settingsDropdown.classList.remove('show');
   });
 
-  // Set initial theme
   const savedTheme = localStorage.getItem('theme') || 'cyberpunk';
   setTheme(savedTheme);
 
-  // Set initial background if saved
   const savedBg = localStorage.getItem('background');
   if (savedBg) {
     setBackground(savedBg);
