@@ -1,4 +1,3 @@
-/* Styles spécifiques à la page contact */
 .contact-hero {
   text-align: center;
   padding: 60px 20px;
@@ -97,7 +96,6 @@
   text-shadow: 0 0 8px #00ff00;
 }
 
-/* Ajustements pour les différents thèmes */
 body.theme-pink .contact-hero {
   border-color: #fff;
 }
